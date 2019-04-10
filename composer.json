@@ -25,17 +25,14 @@
   },
   "autoload": {
     "psr-4": {
-      "GoogleTranslatorBundle\\GoogleTranslatorBundle\\": ""
+      "GoogleTranslatorBundle\\": ""
     },
     "exclude-from-classmap": [
       "/Tests/"
     ]
   },
-  "minimum-stability": "stable",
+  "minimum-stability": "dev",
   "extra": {
-    "branch-alias": {
-      "dev-master": "1.0-dev"
-    },
     "symfony": {
       "allow-contrib": "true"
     }
