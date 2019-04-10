@@ -25,7 +25,7 @@
   },
   "autoload": {
     "psr-4": {
-      "sabrihamda\\GoogleTranslatorBundle\\": ""
+      "GoogleTranslatorBundle\\GoogleTranslatorBundle\\": ""
     },
     "exclude-from-classmap": [
       "/Tests/"
