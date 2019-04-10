@@ -1,5 +1,5 @@
 <?php
-namespace App\GoogleTranslator\GoogleTranslatorBundle\Services;
+namespace GoogleTranslator\GoogleTranslatorBundle\Services;
 
 
 /**

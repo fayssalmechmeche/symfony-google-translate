@@ -3,16 +3,16 @@
  * Created by Sabri Hamda <sabri@hamda.ch>
  */
 
-namespace App\GoogleTranslator\GoogleTranslatorBundle;
+namespace GoogleTranslator\GoogleTranslatorBundle;
 
-use App\GoogleTranslator\GoogleTranslatorBundle\Services\GoogleFreeTranslate;
+use GoogleTranslator\GoogleTranslatorBundle\Services\GoogleFreeTranslate;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
-use App\GoogleTranslator\GoogleTranslatorBundle\Services\MessagesCreator;
+use GoogleTranslator\GoogleTranslatorBundle\Services\MessagesCreator;
 use Symfony\Component\Translation\TranslatorInterface;
 
 /**
  * Class GoogleTranslatorBundle
- * @package App\GoogleTranslator\GoogleTranslatorBundle
+ * @package GoogleTranslator\GoogleTranslatorBundle
  */
 class GoogleTranslatorBundle extends Bundle
 {

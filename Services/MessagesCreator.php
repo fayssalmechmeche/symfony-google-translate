@@ -3,12 +3,12 @@
  * Created by Sabri Hamda <sabri@hamda.ch>
  */
 
-namespace App\GoogleTranslator\GoogleTranslatorBundle\Services;
+namespace GoogleTranslator\GoogleTranslatorBundle\Services;
 
 
 /**
  * Class MessagesCreator
- * @package App\GoogleTranslator\GoogleTranslatorBundle\Services
+ * @package GoogleTranslator\GoogleTranslatorBundle\Services
  */
 class MessagesCreator
 {

@@ -3,14 +3,14 @@
  * Created by Sabri Hamda <sabri@hamda.ch>
  */
 
-namespace App\GoogleTranslator\GoogleTranslatorBundle\Services;
+namespace GoogleTranslator\GoogleTranslatorBundle\Services;
 
 
 use Symfony\Component\Finder\Finder;
 
 /**
  * Class TemplateParser
- * @package App\GoogleTranslator\GoogleTranslatorBundle\Services
+ * @package GoogleTranslator\GoogleTranslatorBundle\Services
  */
 class TemplateParser
 {

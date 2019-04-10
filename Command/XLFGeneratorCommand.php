@@ -3,9 +3,9 @@
  * Created by Sabri Hamda <sabri@hamda.ch>
  */
 
-namespace App\GoogleTranslator\GoogleTranslatorBundle\Command;
+namespace GoogleTranslator\GoogleTranslatorBundle\Command;
 
-use App\GoogleTranslator\GoogleTranslatorBundle\GoogleTranslatorBundle;
+use GoogleTranslator\GoogleTranslatorBundle\GoogleTranslatorBundle;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -17,7 +17,7 @@ use Symfony\Component\Console\Style\SymfonyStyle;
 
 /**
  * Class XLFGeneratorCommand
- * @package App\GoogleTranslator\GoogleTranslatorBundle\Command
+ * @package GoogleTranslator\GoogleTranslatorBundle\Command
  */
 class XLFGeneratorCommand extends Command
 {
