@@ -8,7 +8,7 @@ namespace GoogleTranslator\GoogleTranslatorBundle;
 use GoogleTranslator\GoogleTranslatorBundle\Services\GoogleFreeTranslate;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 use GoogleTranslator\GoogleTranslatorBundle\Services\MessagesCreator;
-use Symfony\Component\Translation\TranslatorInterface;
+use Symfony\Component\Translation\Translator;
 
 /**
  * Class GoogleTranslatorBundle
@@ -42,9 +42,9 @@ class GoogleTranslatorBundle extends Bundle
     private $generatedKeys = [];
 
     /**
-     * @param TranslatorInterface $translator
+     * @param Translator $translator
      */
-    public function generate(TranslatorInterface $translator)
+    public function generate(Translator $translator)
     {
 
         $this->fallbackLocales = $translator->getfallbackLocales();
