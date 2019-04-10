@@ -1,0 +1,49 @@
+{
+  "name": "sh/google-translator-bundle",
+  "type": "symfony-bundle",
+  "description": "Symfony Translator using google",
+  "keywords": [],
+  "homepage": "https://github.com/SabriHamda/SH-Google-Translator-Bundle",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "sabri Hamda",
+      "email": "sabri@hamda.ch"
+    }
+  ],
+  "require": {
+    "php": "^7.1.1"
+  },
+  "require-dev": {
+    "symfony/dependency-injection": "~3.4|~4.0",
+    "phpunit/phpunit": "^6.5"
+  },
+  "conflict": {
+    "symfony/dependency-injection": "<3.4",
+    "symfony/event-dispatcher": "<3.4",
+    "symfony/var-dumper": "<3.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "GoogleTranslatorBundle\\": ""
+    },
+    "exclude-from-classmap": [
+      "/Tests/"
+    ]
+  },
+  "minimum-stability": "dev",
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0-dev"
+    },
+    "symfony": {
+      "allow-contrib": "true"
+    }
+  },
+  "scripts": {
+    "auto-scripts": {
+      "cache:clear": "symfony-cmd",
+      "assets:install %PUBLIC_DIR%": "symfony-cmd"
+    }
+  }
+}
