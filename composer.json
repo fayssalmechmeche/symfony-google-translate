@@ -1,5 +1,5 @@
 {
-  "name": "sh/google-translator-bundle",
+  "name": "sabrihamda/google-translator-bundle",
   "type": "symfony-bundle",
   "description": "Symfony Translator using google",
   "keywords": [],
