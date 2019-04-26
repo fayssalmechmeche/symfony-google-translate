@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services
+        https://symfony.com/schema/dic/services/services-1.0.xsd">
+    <services>
+        <service id="short_hint_google_translator.utils.generator" class="ShortHint\GoogleTranslatorBundle\Utils\Generator" public="true"/>
+        <service id="ShortHint\GoogleTranslatorBundle\Utils\Generator" alias="short_hint_google_translator.utils.generator" public="false"/>
+
+        <service id="short_hint_google_translator.command.generator_command" class="ShortHint\GoogleTranslatorBundle\Command\GeneratorCommand" public="true">
+            <argument type="service" id="short_hint_google_translator.utils.generator"/>
+            <tag name="console.command" command="google:translate"/>
+        </service>
+        <service id="ShortHint\GoogleTranslatorBundle\Command\GeneratorCommand" alias="short_hint_google_translator.command.generator_command" public="false"/>
+
+    </services>
+</container>

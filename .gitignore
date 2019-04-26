@@ -1,4 +1,5 @@
 ###> GoogleTranslatorBundle ###
 /.idea/
 /vendor/
+.php_cs.cache
 ###< GoogleTranslatorBundle ###

@@ -1,5 +1,5 @@
 {
-  "name": "sabrihamda/google-translator-bundle",
+  "name": "short-hint/google-translator-bundle",
   "type": "symfony-bundle",
   "description": "Symfony Translator using google",
   "keywords": [],
@@ -31,7 +31,7 @@
   },
   "autoload": {
     "psr-4": {
-      "GoogleTranslator\\GoogleTranslatorBundle\\": "src/"
+      "ShortHint\\GoogleTranslatorBundle\\": "src/"
     },
     "exclude-from-classmap": [
       "/Tests/"
