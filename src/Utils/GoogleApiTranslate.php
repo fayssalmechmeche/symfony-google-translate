@@ -1,6 +1,6 @@
 <?php
 /**
- * This file is part of the Symfony translation project.
+ * This file is part of the Short Hint | Google Translator project.
  *
  * (c) Sabri Hamda <sabri@hamda.ch>
  *
