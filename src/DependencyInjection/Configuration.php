@@ -33,7 +33,7 @@ class Configuration implements ConfigurationInterface
             ->arrayNode('target_languages')
                 ->beforeNormalization()->ifString()->then(function ($v) { return [$v]; })->end()
                 ->prototype('scalar')->end()
-                ->defaultValue(['%locale%'])
+                ->defaultValue(['en'])
             ->end();
 
         return $treeBuilder;
