@@ -37,7 +37,7 @@ php composer require sabrihamda/google-translator-bundle
 To safly start with this bundle, be sure that all the words to be translated are passed to the Translations component like this: <br/>
 ```{{ 'string to translate'|trans }}```<br/>
 >Example: <br/>
-![](img/https://res.cloudinary.com/hamda-ch/image/upload/c_scale,f_auto,q_100,w_900/v1556654511/GITHUB/GOOGLE-TRANSLATOR/twig-example-1.png)<br/>
+![](https://res.cloudinary.com/hamda-ch/image/upload/c_scale,f_auto,q_100,w_1000/v1556654511/GITHUB/GOOGLE-TRANSLATOR/twig-example-1.png)<br/>
 
 > Config
 
