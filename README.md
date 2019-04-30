@@ -8,7 +8,7 @@ This bundle will allow you to translate your symfony application instantly and w
 
 To use this bundle you would need two symfony4 components.<br/>
 ```Twig & Translations.``` <br/>
-Cause the bundle will looking for  ```{{'the string to translate' | trans}}``` in the ```/Templates``` directory by fetching all files with the ```.twig``` extension.
+Cause the bundle will looking for  ```{{'the string to translate'|trans}}``` in the ```/Templates``` directory by fetching all files with the ```.twig``` extension.
 ### Installation with composer
 
 Using  [symfony/flex](https://github.com/symfony/flex).
