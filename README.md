@@ -62,7 +62,7 @@ All the messages files will be generated in the ```./translation``` directory.
 
 >The code in this project is licensed under MIT license.
 
-Copyright (c) 2018 Sabri Hamda
+Copyright (c) 2019 Sabri Hamda
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
