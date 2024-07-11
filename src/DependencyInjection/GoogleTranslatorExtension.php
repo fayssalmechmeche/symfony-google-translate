@@ -32,7 +32,7 @@ class GoogleTranslatorExtension extends Extension
         $config = $this->processConfiguration($configuration, $configs);
 
         $definition = $container->getDefinition('short_hint_google_translator.command.generator_command');
-        $definition->setArgument(1, $config['kernel.default_locale']);
+        $definition->setArgument(1, $config['default_locale']);
         $definition->setArgument(2, $config['target_languages']);
         $definition->setArgument(3, $config['api_key']);
     }
