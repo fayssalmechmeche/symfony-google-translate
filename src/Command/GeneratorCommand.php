@@ -164,7 +164,7 @@ class GeneratorCommand extends Command
                 'command' => 'translation:extract',
                 '--dump-messages' => true,
                 '--force' => true,
-                '--output-format' => 'php',
+                '--format' => 'php',
                 'locale' => $this->locale,
             );
             $greetInput = new ArrayInput($arguments);
