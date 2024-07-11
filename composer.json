@@ -3,7 +3,7 @@
   "type": "symfony-bundle",
   "description": "Symfony Translator using google",
   "keywords": [],
-  "homepage": "https://github.com/SabriHamda/SH-Google-Translator-Bundle",
+  "homepage": "https://github.com/jokashongwe/symfony-google-translate",
   "license": "MIT",
   "authors": [
     {
