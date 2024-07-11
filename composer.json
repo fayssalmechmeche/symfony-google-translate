@@ -1,5 +1,5 @@
 {
-  "name": "nagandev/google-translator-bundle",
+  "name": "nagandev/symfony-google-translate-bundle",
   "type": "symfony-bundle",
   "description": "Symfony Translator using google",
   "keywords": [],
