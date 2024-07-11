@@ -48,7 +48,7 @@ class GeneratorCommand extends Command
     private $locale;
 
     /**
-     * The languages ​​in which the application must be translated.
+     * The languages in which the application must be translated.
      *
      * @var array
      */
@@ -107,15 +107,15 @@ class GeneratorCommand extends Command
         while ($i++ < 2) {
             sleep(1);
             if (!empty($this->locale)) {
-//                $this->locale = $this->translator->getLocale();
+                $this->locale = 'en'; //makes en the default locale
             } else {
-                $errorIo->error('You must config your locale application languege in [config/services.yaml]');
+                $errorIo->error('You must config your locale application language in [config/services.yaml]');
                 return Command::INVALID;
                 //exit();
             }
 
             if (!empty($this->targetLanguages)) {
-//                $this->targetLanguages[] = $this->translator->gettargetLanguages();
+//                $this->targetLanguages[] = $this->translator->getTargetLanguages();
 //                $shiftTargetLanguages = array_shift($this->targetLanguages);
                 $shiftTargetLanguages = $this->targetLanguages;
 
