@@ -161,7 +161,7 @@ class GeneratorCommand extends Command
             // Generate the default messages.%locale.php
             $command = $this->getApplication()->find('translation:update');
             $arguments = array(
-                'command' => 'translation:update',
+                'command' => 'translation:extract',
                 '--dump-messages' => true,
                 '--force' => true,
                 '--output-format' => 'php',
