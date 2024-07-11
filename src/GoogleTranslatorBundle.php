@@ -15,7 +15,7 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 class GoogleTranslatorBundle extends Bundle
 {
-    public function getContainerExtension()
+    public function getContainerExtension() : ?ExtensionInterface
     {
         if (null === $this->extension) {
             $this->extension = new GoogleTranslatorExtension();
