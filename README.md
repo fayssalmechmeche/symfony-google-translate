@@ -1,4 +1,4 @@
-# Symfony 4 | Free Google Translator Bundle
+# Symfony | Free Google Translator Bundle based on https://github.com/SabriHamda/SH-Google-Translator-Bundle
 > 5000 words maximum
 
 
@@ -62,7 +62,7 @@ All the messages files will be generated in the ```./translation``` directory.
 
 >The code in this project is licensed under MIT license.
 
-Copyright (c) 2019 Sabri Hamda
+Copyright (c) 2024 Jonathan Kashongwe
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
