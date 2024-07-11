@@ -19,17 +19,17 @@ class GoogleFreeTranslate
     /**
      * @var
      */
-    private $source;
+    private string $source;
 
     /**
      * @var
      */
-    private $target;
+    private string $target;
 
     /**
      * @var
      */
-    private $text;
+    private string $text;
 
     /**
      * Retrieves the translation of a text.
@@ -45,7 +45,7 @@ class GoogleFreeTranslate
      *
      * @throws /\Exception
      */
-    public function translate($source, $target, $text)
+    public function translate(string $source, string $target, string $text): string
     {
         $this->source = $source;
         $this->target = $target;
@@ -58,9 +58,7 @@ class GoogleFreeTranslate
         // $response = self::getStringBetween("onmouseout=\"this.style.backgroundColor='#fff'\">", "</span></div>", strval($response));
 
         // Clean translation
-        $translation = self::getSentencesFromJSON($response);
-
-        return $translation;
+        return self::getSentencesFromJSON($response);
     }
 
     /**
@@ -75,11 +73,11 @@ class GoogleFreeTranslate
      * @param string $text
      *                       Text to translate taken from the 'translate' function
      *
-     * @return object[] The response of the translation service in JSON format
+     * @return string The response of the translation service in JSON format
      *
      * @throws /\Exception
      */
-    protected static function requestTranslation($source, $target, $text)
+    protected static function requestTranslation(string $source, string $target, string $text): string
     {
         // Google translate URL
         $url = 'https://translate.google.com/translate_a/single?client=at&dt=t&dt=ld&dt=qca&dt=rm&dt=bd&dj=1&hl=es-ES&ie=UTF-8&oe=UTF-8&inputm=2&otf=2&iid=1dd3b944-fa62-4b55-b330-74909a99969e';
@@ -99,7 +97,7 @@ class GoogleFreeTranslate
             $fields_string .= $key.'='.$value.'&';
         }
 
-        rtrim($fields_string, '&');
+        $fields_string = rtrim($fields_string, '&');
 
         // Open connection
         $ch = curl_init();
@@ -131,7 +129,7 @@ class GoogleFreeTranslate
      *
      * @return string A single string with the translation
      */
-    protected static function getSentencesFromJSON($json)
+    protected static function getSentencesFromJSON(string $json): string
     {
         $sentencesArray = json_decode($json, true);
         $sentences = '';

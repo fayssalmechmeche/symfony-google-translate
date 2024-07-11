@@ -12,6 +12,7 @@ namespace ShortHint\GoogleTranslatorBundle\Command;
 
 use ShortHint\GoogleTranslatorBundle\Utils\Generator;
 use Symfony\Component\Console\Command\Command;
+use Symfony\Component\Console\Exception\ExceptionInterface;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Input\ArrayInput;
@@ -71,21 +72,21 @@ class GeneratorCommand extends Command
         parent::__construct(self::$defaultName);
     }
 
-    protected function configure()
+    protected function configure(): void
     {
         $this->setName('google:translate')
             ->setDescription('Translate and generate translation messages');
     }
 
     /**
-     * @param InputInterface  $input
+     * @param InputInterface $input
      * @param OutputInterface $output
      *
-     * @return int|void|null
+     * @return int
      *
-     * @throws \Exception
+     * @throws ExceptionInterface
      */
-    protected function execute(InputInterface $input, OutputInterface $output)
+    protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $io = new SymfonyStyle($input, $output);
         $errorIo = $io->getErrorStyle();
@@ -102,14 +103,15 @@ class GeneratorCommand extends Command
         $progressBar = new ProgressBar($output, 100);
         $progressBar->start();
         $i = 0;
+        $targetLanguages = ['fr'];
         while ($i++ < 2) {
             sleep(1);
             if (!empty($this->locale)) {
 //                $this->locale = $this->translator->getLocale();
             } else {
                 $errorIo->error('You must config your locale application languege in [config/services.yaml]');
-
-                exit();
+                return Command::INVALID;
+                //exit();
             }
 
             if (!empty($this->targetLanguages)) {
@@ -119,7 +121,8 @@ class GeneratorCommand extends Command
 
                 if (1 === count($shiftTargetLanguages)) {
                     $errorIo->error('Sorry, no target languages detected in your application');
-                    exit();
+                    return Command::FAILURE;
+                    //exit();
                 }
                 $targetLanguages = implode(',', $shiftTargetLanguages);
             } else {
@@ -128,7 +131,8 @@ class GeneratorCommand extends Command
                     '<fg=red> Error: You must config your targetLanguages languages in </><fg=green>[config/packages/translation.yaml]</>',
                     '',
                 ]);
-                exit();
+                return Command::INVALID;
+                //exit();
             }
 
             $progressBar->advance(50);
@@ -185,5 +189,6 @@ class GeneratorCommand extends Command
             $output->writeLn('');
             $errorIo->success('we stop the execution of process');
         }
+        return  Command::SUCCESS;
     }
 }

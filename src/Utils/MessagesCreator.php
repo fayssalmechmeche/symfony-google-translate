@@ -21,7 +21,7 @@ class MessagesCreator
      * @param $locale
      * @param $generatedKeys
      */
-    public function makeXLF($translated = [], string $lang, $locale, $generatedKeys)
+    public function makeXLF($translated = [], string $lang, $locale, $generatedKeys): void
     {
         $myfile = fopen('./translations/messages.'.$lang.'.xlf', 'w') or die('Unable to open file!');
         $txt = "<?xml version=\"1.0\"?>\n";

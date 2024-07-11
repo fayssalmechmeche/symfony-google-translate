@@ -21,10 +21,10 @@ class Configuration implements ConfigurationInterface
     /**
      * @return TreeBuilder
      */
-    public function getConfigTreeBuilder()
+    public function getConfigTreeBuilder(): TreeBuilder
     {
-        $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('ShortHint\GoogleTranslatorBundle');
+        $treeBuilder = new TreeBuilder('ShortHint\GoogleTranslatorBundle');
+        $rootNode = $treeBuilder->getRootNode();
 
         $rootNode
             ->children()

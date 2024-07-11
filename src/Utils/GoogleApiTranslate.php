@@ -10,10 +10,16 @@
 
 namespace ShortHint\GoogleTranslatorBundle\Utils;
 
-use Google\Cloud\Translate\TranslateClient;
+use Google\Cloud\Core\Exception\GoogleException;
+use Google\Cloud\Core\Exception\ServiceException;
+use Google\Cloud\Translate\V2\TranslateClient;
 
 class GoogleApiTranslate
 {
+    /**
+     * @throws GoogleException
+     * @throws ServiceException
+     */
     public function translate($target, $text, $apiKey)
     {
         // Your Google Cloud Platform project ID

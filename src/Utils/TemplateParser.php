@@ -20,12 +20,12 @@ class TemplateParser
     /**
      * @var array Path of all files in Templates directory
      */
-    private $templates = [];
+    private array $templates = [];
 
     /**
      * @param $generatedKeys
      */
-    public function parse($generatedKeys)
+    public function parse($generatedKeys): void
     {
         $templates = $this->parseTemplatesDirectory();
 
@@ -45,7 +45,7 @@ class TemplateParser
      * @param $template
      * @param $templatePath
      */
-    private function create($template, $templatePath)
+    private function create($template, $templatePath): void
     {
         $myfile = fopen('./templates/'.$templatePath, 'w') or die('Unable to open file!');
         $txt = $template;
@@ -56,7 +56,7 @@ class TemplateParser
     /**
      * @return array
      */
-    public function parseTemplatesDirectory()
+    public function parseTemplatesDirectory(): array
     {
         $finder = new Finder();
         $finder->files()->in('./templates/');

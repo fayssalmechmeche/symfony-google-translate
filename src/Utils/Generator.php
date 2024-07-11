@@ -18,14 +18,14 @@ class Generator
     /**
      * @var
      */
-    private $apiKey;
+    private string $apiKey;
 
     /**
      * Array of all application supported languages.
      *
      * @var array
      */
-    private $fallbackLocales = [];
+    private array $fallbackLocales = [];
 
     /**
      * Array of values to translate extracted from the messages.%locale%.php.
@@ -39,28 +39,28 @@ class Generator
      *
      * @var string
      */
-    private $localeLanguage;
-
-    /**
-     * @var
-     */
-    private $translatedValues;
-
-    /**
-     * @var
-     */
-    private $finalTranslated;
+    private string $localeLanguage;
 
     /**
      * @var array
      */
-    private $generatedKeys = [];
+    private array $translatedValues = [];
+
+    /**
+     * @var array
+     */
+    private array $finalTranslated;
+
+    /**
+     * @var array
+     */
+    private array $generatedKeys = [];
 
     /**
      * @param $fallbackLocales
      * @param $locale
      */
-    public function generate($fallbackLocales, $locale, $apiKey)
+    public function generate($fallbackLocales, $locale, $apiKey): void
     {
         $this->fallbackLocales = $fallbackLocales;
         $this->localeLanguage = $locale;
@@ -97,15 +97,13 @@ class Generator
     /**
      * Create table with #ID's.
      *
-     * @return array
+     * @return void
      */
-    private function generateKeys()
+    private function generateKeys(): void
     {
         foreach ($this->valuesToTranslate as $valueToTranslate) {
             $this->generatedKeys[] = 'SHG-'.uniqid();
         }
-
-        return $this->generatedKeys;
     }
 
     /**
@@ -113,7 +111,7 @@ class Generator
      *
      * @param $localeLanguage
      */
-    public function removeDefaultMessage($localeLanguage)
+    public function removeDefaultMessage($localeLanguage): void
     {
         $defaultMessage = './translations/messages.'.$localeLanguage.'.php';
         $myFileLink = fopen($defaultMessage, 'w') or die("can't open file");
