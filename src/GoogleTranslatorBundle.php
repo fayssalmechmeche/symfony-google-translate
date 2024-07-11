@@ -12,6 +12,7 @@ namespace ShortHint\GoogleTranslatorBundle;
 
 use ShortHint\GoogleTranslatorBundle\DependencyInjection\GoogleTranslatorExtension;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
+use Symfony\Component\DependencyInjection\Extension\ExtensionInterface;
 
 class GoogleTranslatorBundle extends Bundle
 {
