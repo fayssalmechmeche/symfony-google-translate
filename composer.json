@@ -1,9 +1,9 @@
 {
-  "name": "nagandev/symfony-google-translate-bundle",
+  "name": "zerox-k/symfony-google-translate-bundle",
   "type": "symfony-bundle",
   "description": "Symfony Translator using google",
   "keywords": [],
-  "homepage": "https://github.com/jokashongwe/symfony-google-translate",
+  "homepage": "https://github.com/zerox-k/symfony-google-translate",
   "license": "MIT",
   "authors": [
     {
@@ -13,6 +13,10 @@
     {
       "name": "Jonathan Kashongwe",
       "email": "jokashongwe@gmail.com"
+    },
+    {
+      "name": "ZeRoX",
+      "email": "as234zx12@yandex.ru"
     }
   ],
   "require": {
