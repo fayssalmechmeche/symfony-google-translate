@@ -28,7 +28,7 @@ class Configuration implements ConfigurationInterface
 
         $rootNode
             ->children()
-            ->scalarNode('default_locale')->defaultValue('%locale%')->end()
+            ->scalarNode('default_locale')->defaultValue('%kernel.default_locale%')->end()
             ->scalarNode('api_key')->defaultValue(null)->end()
             ->arrayNode('target_languages')
                 ->beforeNormalization()->ifString()->then(function ($v) { return [$v]; })->end()
